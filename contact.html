@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - HOME</title>
+</head>
+<body>
+    <header>
+        <h1>Kontakt</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="about.html">O nas</a></li>
+            <li><a href="services.html">Usługi</a></li>
+            <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="contact-info">
+            <h2>Dane kontaktowe</h2>
+            <div>
+                <h3>Adres</h3>
+                <p>ul. Przykładowa 123<br>
+                00-000 Warszawa<br>
+                Polska</p>
+                
+                <h3>Telefon</h3>
+                <p>+48 123 456 789</p>
+                
+                <h3>Email</h3>
+                <p>kontakt@homeweb.pl</p>
+                
+                <h3>Godziny pracy</h3>
+                <p>Poniedziałek - Piątek: 9:00 - 18:00<br>
+                Sobota: 10:00 - 14:00<br>
+                Niedziela: Zamknięte</p>
+            </div>
+        </section>
+        <section id="contact-form">
+            <h2>Formularz kontaktowy</h2>
+            <form>
+                <div>
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Temat:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+        </section>
+        <section id="map">
+            <h2>Lokalizacja</h2>
+            <div>
+                <!-- Miejsce na mapę -->
+                <p>Tutaj można umieścić mapę z lokalizacją firmy.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Home Web</p>
+    </footer>
+</body>
+</html>
