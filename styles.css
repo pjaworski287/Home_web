@@ -1,255 +1,123 @@
+/* body - standard styles */
 body {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
-    color: #e2e8f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #313536 0%, #3c4142 100%);      /* gradient bg_color_1 to bg_color_2 */
+    color: #e2e8f0;                                                       /* text color */   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;           /* font family: Segoe UI -> Tahoma -> Geneva -> Verdana -> sans-serif */
+    margin: 0;                                                              /* margin */
+    padding: 0;                                                             /* padding */
+    min-height: 100vh;                                                      /* min height - 100% viewport height */
 }
 
-a {
-    color: #a0aec0;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #cbd5e1;
-    text-decoration: none;
-}
-
-header {
-    background: rgba(45, 55, 72, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem 2rem;
-    margin-left: 250px;
-    border-bottom: 1px solid rgba(113, 128, 150, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #f1f5f9;
-}
-
-footer {
-    background: rgba(45, 55, 72, 0.9);
-    padding: 1rem 2rem;
-    margin-left: 250px;
-    border-top: 1px solid rgba(113, 128, 150, 0.1);
-    text-align: center;
-    color: #a0aec0;
-    font-size: 0.9rem;
-}
-
+/* main - styles */
 main {
-    padding: 2rem;
-    margin-left: 250px;
-    min-height: calc(100vh - 140px);
-    background: rgba(26, 32, 44, 0.4);
+    padding: 2rem;                          /* padding - 2rem (2 * 16px) */
+    min-height: calc(100vh - 140px);        /* min height - 100% viewport height - header and footer height */
 }
 
-/* Card-like sections */
-section {
-    background: linear-gradient(145deg, #374151 0%, #2d3748 100%);
-    backdrop-filter: blur(15px);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(156, 163, 175, 0.1);
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-}
-
-section:hover {
-    transform: translateY(-4px);
-    box-shadow: 
-        0 12px 40px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
-    border-color: rgba(156, 163, 175, 0.2);
-}
-
-section h2 {
-    color: #f7fafc;
-    margin: 0 0 1.5rem 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 0.5rem;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(90deg, #9ca3af, transparent);
-}
-
-section h3 {
-    color: #e2e8f0;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 1.5rem 0 0.75rem 0;
-}
-
-/* Modern buttons */
-button {
-    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 
-        0 4px 12px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(156, 163, 175, 0.2);
-}
-
-button:hover {
-    background: linear-gradient(135deg, #718096 0%, #4a5568 100%);
-    transform: translateY(-2px);
-    box-shadow: 
-        0 8px 20px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-/* Navigation styles - Modern sidebar */
+/* nav - styles */
 nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 250px;
-    background: rgba(45, 55, 72, 0.95);
-    backdrop-filter: blur(20px);
-    border-right: 1px solid rgba(113, 128, 150, 0.2);
-    display: flex;
-    flex-direction: column;
-    z-index: 200;
+    padding: 1rem 2rem;                       /* padding - 1rem (1 * 16px) | 2rem (2 * 16px) */
+    backdrop-filter: blur(10px);              /* backdrop blur effect */
 }
 
-/* Logo/Brand area */
-nav::before {
-    content: "🏠 HOME";
-    display: block;
-    padding: 2rem 1.5rem 1rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #f7fafc;
-    border-bottom: 1px solid rgba(113, 128, 150, 0.2);
+/* header - styles */
+header {
+    background: rgba(71, 71, 71, 0.9);    /* semi-transparent background RGBA */
+    backdrop-filter: blur(10px);            /* blur effect of elements behind header */
+    padding: 1.5rem 2rem;                   /* padding horizontal: 1.5rem (1.5 * 16px) | padding vertical: 2rem (2 * 16px) */
+    position: sticky;                       /* sticky position - combine of fixed and relative position - relative is default - fixed sticks things to viewport - sticky sticks to nearest scrolling ancestor */
+    top: 0;                                 /* stick to top without space */
+    z-index: 100;                           /* z-index for layering - higher means on top */
+    display: flex;                          /* flexbox layout - enables flexible box layout */
+    flex-direction: column;                 /* column direction - elements stacked vertically */
+    align-items: center;                    /* center horizontally - elements aligned to center */
+    justify-content: center;                /* center vertically - elements aligned to center */
+    text-align: center;                     /* center inline/text content - elements aligned to center */
 }
 
-nav ul {
-    list-style: none;
-    padding: 1rem 0;
-    margin: 0;
-    flex: 1;
+/* header h1 - styles */
+header h1 {
+    margin: 0;                              /* remove default margin */
+    font-size: 1.5rem;                      /* font size - 1.5rem (1.5 * 16px) */
+    font-weight: 600;                       /* font weight - semi-bold */
+    color: #f1f5f9;                       /* header text color */
 }
 
-nav li {
-    margin: 0.25rem 0;
+/* footer - styles */
+footer {
+    background: rgba(71, 71, 71, 0.9);      /* semi-transparent background RGBA */
+    padding: 0.5rem 2rem;                       /* padding horizontal: 0.5rem (0.5 * 16px) | padding vertical: 2rem (2 * 16px) */
+    text-align: center;                       /* center align text */
+    color: #d6dadf;                         /* footer text color */
+    font-size: 0.9rem;                        /* font size - 0.9rem (0.9 * 16px) */
 }
 
-nav li a {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1.5rem;
-    color: #cbd5e1;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 0 0.75rem;
-    transition: all 0.2s ease;
-    font-weight: 500;
-    position: relative;
+/* Tile menu styles in main navigation */
+.main-nav {
+    display: grid;                                                /* Set elements as a grid */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  /* Dynamically create columns min. 180px, max. taking full available width */
+    gap: 20px;                                                    /* Space between tiles in the grid (both vertical and horizontal) */
+    padding: 20px;                                                /* Default inner margin for small screens */
+    justify-items: center;                                        /* Center each tile horizontally within its column */
 }
 
-nav li a:hover,
-nav li a.active {
-    background: rgba(113, 128, 150, 0.2);
-    color: #e2e8f0;
-    transform: translateX(4px);
+/* When site is wider than 961px, use ~10% left/right padding */
+@media (min-width: 961px) {
+    .main-nav {
+        padding: 20px 10vw; /* top/bottom: 20px, left/right: ~10% of viewport width */
+    }
 }
 
-nav li a::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: currentColor;
-    margin-right: 12px;
-    opacity: 0.7;
+/* Tile styles in main navigation */
+.subsite-tile {
+  aspect-ratio: 1.62 / 1;                       /* Keeps 1.62:1 aspect ratio - golden ratio */
+  width: 100%;                                  /* Tile takes full available width in its column */
+  max-width: 300px;                             /* Maximum tile width — prevents excessive stretching */
+  background: #2e2e2e;                        /* Tile background color */
+  border-radius: 16px;                          /* Tile border radius (larger value = more rounded corners) */
+  color: #fff;                                /* Tile text and icon color */
+  text-decoration: none;                        /* Removes underline from link (if tile is <a>) */
+  display: flex;                                /* Enables flexible alignment of content vertically and horizontally */
+  flex-direction: column;                       /* Arranges inner elements (e.g. icon and text) in a column, one below the other */
+  align-items: center;                          /* Center content horizontally within the tile */
+  justify-content: center;                      /* Center content vertically within the tile */
+  transition: all 0.3s ease;                    /* Smooth transition for changes (e.g. hover) over 0.3s */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);       /* Shadow around the tile for depth effect */
 }
 
-nav li a:hover::before,
-nav li a.active::before {
-    background: #a0aec0;
-    opacity: 1;
+/* Tile icon - styles */
+.subsite-tile img {
+  width: 40%;
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 12px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* Tile description - styles */
+.subsite-tile p {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
+/* Tile hover - styles */
+.subsite-tile:hover {
+  background: #3b3b3b; /* rdza */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(49, 49, 49, 0.4);
 }
 
-label {
-    color: #cbd5e1;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+/* Tile icon hover - styles */
+.subsite-tile:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
-input, textarea {
-    background: rgba(26, 32, 44, 0.6);
-    border: 1px solid rgba(113, 128, 150, 0.3);
-    border-radius: 8px;
-    padding: 0.75rem;
-    color: #e2e8f0;
-    font-family: inherit;
-    transition: border-color 0.2s ease;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: #a0aec0;
-    box-shadow: 0 0 0 3px rgba(160, 174, 192, 0.1);
-}
-
-/* List styles */
-ul {
-    padding-left: 1.5rem;
-}
-
-li {
-    margin: 0.5rem 0;
-    color: #cbd5e1;
+/* Link - styles */
+a {
+    color: #60a5fa;                       /* link color */
+    text-decoration: none;                /* remove underline from links */
 }
