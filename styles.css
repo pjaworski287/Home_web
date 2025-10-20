@@ -77,6 +77,7 @@ footer {
   border-radius: 16px;                          /* Tile border radius (larger value = more rounded corners) */
   color: #fff;                                /* Tile text and icon color */
   text-decoration: none;                        /* Removes underline from link (if tile is <a>) */
+  text-align: center;                           /* Center text inside the tile */
   display: flex;                                /* Enables flexible alignment of content vertically and horizontally */
   flex-direction: column;                       /* Arranges inner elements (e.g. icon and text) in a column, one below the other */
   align-items: center;                          /* Center content horizontally within the tile */
@@ -87,12 +88,12 @@ footer {
 
 /* Tile icon - styles */
 .subsite-tile img {
-  width: 40%;
-  max-width: 80px;
+  max-width: 20%;
   height: auto;
-  margin-bottom: 12px;
+  margin-top: 12px;
   filter: brightness(0.9);
   transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 15%;
 }
 
 /* Tile description - styles */
@@ -103,9 +104,12 @@ footer {
   letter-spacing: 0.5px;
 }
 
+.main-nav-mc:hover {
+    background: #25792921;
+}
+
 /* Tile hover - styles */
 .subsite-tile:hover {
-  background: #3b3b3b; /* rdza */
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(49, 49, 49, 0.4);
 }
@@ -115,6 +119,8 @@ footer {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
+
+
 
 /* Link - styles */
 a {
